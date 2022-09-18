@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#63b83c"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/header_bg"
+        android:backgroundTint="@color/primaryColor"
+        android:id="@+id/header"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:text="@string/my_shopping_list"
+            android:paddingBottom="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="3dp"
+            android:textSize="24sp"
+            android:elevation="3dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvitems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:outlineAmbientShadowColor="@color/black"
+        tools:listitem="@layout/grocery_rv_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="40dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
+        android:layout_margin="16dp"
+
+        android:backgroundTint="@color/primaryColor"
+        android:contentDescription="@string/todo"
+        android:elevation="5dp"
+        android:src="@drawable/ic_baseline_add"
+        app:tint="@color/black"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+</RelativeLayout>
